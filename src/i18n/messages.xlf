@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US">
+  <file id="ngi18n" original="ng.template">
+    <unit id="product.title">
+      <notes>
+        <note category="location">src/app/views/product/product.view.html:2,4</note>
+        <note category="description">An introduction of page title</note>
+        <note category="meaning">page title</note>
+      </notes>
+      <segment>
+        <source>Some title</source>
+      </segment>
+    </unit>
+    <unit id="product.description">
+      <notes>
+        <note category="location">src/app/views/product/product.view.html:3,5</note>
+      </notes>
+      <segment>
+        <source>Some description</source>
+      </segment>
+    </unit>
+    <unit id="product.metaTitle">
+      <notes>
+        <note category="location">src/app/views/product/product.view.ts:11</note>
+      </notes>
+      <segment>
+        <source>page title</source>
+      </segment>
+    </unit>
+  </file>
+</xliff>

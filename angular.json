@@ -37,7 +37,8 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            }
+            },
+            "localize": true
           },
           "configurations": {
             "production": {
@@ -144,6 +145,14 @@
               "src/**/*.ts",
               "src/**/*.html"
             ]
+          }
+        }
+      },
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ru": {
+            "translation": "src/i18n/messages.ru.xlf"
           }
         }
       }

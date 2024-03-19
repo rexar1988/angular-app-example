@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './product.view.scss',
 })
 export class ProductView {
-
+  title = $localize`:@@product.metaTitle:page title`;
 }

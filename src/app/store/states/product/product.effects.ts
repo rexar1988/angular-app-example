@@ -11,8 +11,9 @@ const loadProduct = createEffect(
       ofType(productActions.productGroup.loadProduct),
       switchMap(payload => service.getProduct(payload.productId).pipe(
         map(response => productActions.productGroup.loadProductSuccess({ response })),
-        // todo: check it with of operator
-        catchError((error: HttpErrorResponse) => throwError(() => productActions.productGroup.loadProductFailure(error))),
+        catchError((error: HttpErrorResponse) => throwError(
+          () => productActions.productGroup.loadProductFailure(error),
+        )),
       )),
     );
   },

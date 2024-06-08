@@ -1,19 +1,19 @@
-import { provideHttpClient, withFetch } from '@angular/common/http';
-import { ApplicationConfig, isDevMode } from '@angular/core';
-import { provideClientHydration } from '@angular/platform-browser';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ApplicationConfig, isDevMode, provideExperimentalZonelessChangeDetection } from '@angular/core';
 import { provideRouter, withComponentInputBinding, withRouterConfig } from '@angular/router';
-import { provideEffects } from '@ngrx/effects';
-import { provideRouterStore, routerReducer } from '@ngrx/router-store';
-import { provideState, provideStore } from '@ngrx/store';
-import { provideStoreDevtools } from '@ngrx/store-devtools';
+
 import { routes } from './app.routes';
+import { provideClientHydration } from '@angular/platform-browser';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { provideState, provideStore } from '@ngrx/store';
+import { provideRouterStore, routerReducer } from '@ngrx/router-store';
+import { provideEffects } from '@ngrx/effects';
 import { productEffects } from '$store/states/product/product.effects';
 import { productFeature } from '$store/states/product/product.feature';
+import { provideStoreDevtools } from '@ngrx/store-devtools';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideAnimationsAsync(),
+    provideExperimentalZonelessChangeDetection(),
     provideRouter(
       routes,
       withComponentInputBinding(),

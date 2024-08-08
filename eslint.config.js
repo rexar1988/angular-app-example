@@ -31,7 +31,7 @@ module.exports = tsEslint.config(
         "error",
         {
           "type": "element",
-          "prefix": "app",
+          "prefix": "hlx",
           "style": "kebab-case"
         }
       ],
@@ -40,7 +40,7 @@ module.exports = tsEslint.config(
         {
           "type": "attribute",
           "prefix": [
-            "app",
+            "hlx",
             "ng",
             "form"
           ],

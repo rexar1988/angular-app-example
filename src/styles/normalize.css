@@ -1,0 +1,103 @@
+﻿:root {
+
+}
+
+body {
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: inline-block;
+  border-style: none;
+}
+
+label {
+  display: inline-block;
+}
+
+iframe {
+  border: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  cursor: pointer;
+  user-select: none;
+  font-family: inherit;
+  margin: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+blockquote,
+dl,
+dd,
+figure,
+input[type="checkbox"],
+input[type="radio"],
+p,
+pre,
+textarea {
+  margin: 0;
+}
+
+
+
+button {
+  outline: none;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}

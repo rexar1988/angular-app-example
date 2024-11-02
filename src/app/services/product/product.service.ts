@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Product } from '$domain/interfaces';
-import { environment } from '$environments/environment';
+import { environment } from '@helix/environments/environment';
+import type { Product } from '@helix/shared/interfaces';
+import type { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',

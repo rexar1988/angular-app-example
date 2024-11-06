@@ -9,7 +9,8 @@ const ignores = [
   'projects/**/*',
   'src/main.ts',
   'src/main.server.ts',
-  'src/index.html'
+  'src/index.html',
+  'src/stories/**/*',
 ];
 
 module.exports = tsEslint.config(

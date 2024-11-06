@@ -6,15 +6,51 @@
 - `ng g config karma`
 - `ng generate environments`
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+## Package installation
+
+### Compodoc
+
+- `ng add @compodoc/compodoc`
+
+### Commitlint
+
+- `npm install --save-dev @commitlint/config-conventional @commitlint/cli`
+
+### Husky
+
+- `npm install --save-dev husky`
+- `npx husky init`
+
+### ESLint
+
+- `npm install --save-dev eslint-plugin-jasmine`
+- `npm install --save-dev eslint-plugin-perfectionist`
+- `npm i -D @stylistic/eslint-plugin`
+
+### NGRX
+
+- `ng add @ngrx/store@latest`
+- `ng add @ngrx/effects@latest`
+- `ng add @ngrx/router-store@latest`
+- `ng add @ngrx/component-store@latest`
+- `ng add @ngrx/signals@latest`
+- `ng add @ngrx/operators@latest`
+- `ng add @ngrx/component@latest`
+- `ng add @ngrx/store-devtools@latest`
+- `ng add @ngrx/schematics@latest`
+- `ng add @ngrx/eslint-plugin`
+
+### Stylelint
+
+- `npm init stylelint`
+
+## About
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 

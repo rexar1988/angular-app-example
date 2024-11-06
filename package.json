@@ -9,9 +9,12 @@
     "test": "ng test",
     "serve:ssr:angular-app-example": "node dist/angular-app-example/server/server.mjs",
     "lint": "ng lint",
-    "format": "ng lint --fix",
+    "lint:format": "ng lint --fix",
     "stylelint": "npx stylelint \"**/*.{css,scss}\"",
-    "prepare": "husky"
+    "prepare": "husky",
+    "compodoc:build": "compodoc -p tsconfig.doc.json",
+    "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
+    "compodoc:serve": "compodoc -s"
   },
   "private": true,
   "dependencies": {
@@ -45,6 +48,7 @@
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@commitlint/types": "^19.5.0",
+    "@compodoc/compodoc": "^1.1.26",
     "@eslint/js": "^9.14.0",
     "@ngrx/eslint-plugin": "^18.1.1",
     "@ngrx/schematics": "^18.1.1",

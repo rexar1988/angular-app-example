@@ -1,5 +1,3 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -29,26 +27,19 @@
     "downlevelIteration": true,
     "exactOptionalPropertyTypes": true,
     "paths": {
-      "$environments/*": ["src/environments/*"],
-      "$animations": ["src/app/animations"],
-      "$components/*": ["src/app/components/*"],
-      "$directives/*": ["src/app/directives/*"],
-      "$domain/classes": ["src/app/domain/classes"],
-      "$domain/enums": ["src/app/domain/enums"],
-      "$domain/functions": ["src/app/domain/functions"],
-      "$domain/interfaces": ["src/app/domain/interfaces"],
-      "$domain/mixins": ["src/app/domain/mixins"],
-      "$domain/models": ["src/app/domain/models"],
-      "$domain/types": ["src/app/domain/types"],
-      "$modules/*": ["src/app/modules/*"],
-      "$pipes/*": ["src/app/pipes/*"],
-      "$routing/*": ["src/app/routing/*"],
-      "$services/*": ["src/app/services/*"],
-      "$store/*": ["src/app/store/*"],
-      "$tokens/*": ["src/app/tokens/*"],
-      "$validators": ["src/app/validators"],
-      "$views/*": ["src/app/views/*"]
-    }
+      "@helix/components/*": ["src/app/components/*"],
+      "@helix/directives/*": ["src/app/directives/*"],
+      "@helix/environments/*": ["src/environments/*"],
+      "@helix/modules/*": ["src/app/modules/*"],
+      "@helix/pipes/*": ["src/app/pipes/*"],
+      "@helix/routing/*": ["src/app/routing/*"],
+      "@helix/services/*": ["src/app/services/*"],
+      "@helix/shared/*": ["src/app/shared/*"],
+      "@helix/store/*": ["src/app/store/*"],
+      "@helix/tokens/*": ["src/app/tokens/*"],
+      "@helix/validators": ["src/app/validators"],
+      "@helix/views/*": ["src/app/views/*"]
+    },
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

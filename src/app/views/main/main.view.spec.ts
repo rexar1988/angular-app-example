@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { type ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MainView } from './main.view';
 
@@ -8,9 +8,9 @@ describe('MainView', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MainView]
+      imports: [MainView],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(MainView);
     component = fixture.componentInstance;

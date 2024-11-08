@@ -179,11 +179,11 @@ module.exports = tsEslint.config(
             'abstract-field',
             'static-field',
 
-            'decorated-field',
-            'public-field',
-            'protected-field',
             'private-field',
             '#private-field',
+            'protected-field',
+            'decorated-field',
+            'public-field',
 
             'constructor',
 

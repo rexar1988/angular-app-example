@@ -11,10 +11,7 @@ module.exports = {
     'scope-enum': [
       RuleConfigSeverity.Error,
       'always',
-      [
-        'config',
-        'profile',
-      ],
+      ['update'],
     ],
     'type-enum': [
       RuleConfigSeverity.Error,

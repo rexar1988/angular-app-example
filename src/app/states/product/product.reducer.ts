@@ -1,7 +1,7 @@
-import type { Product } from '@helix/shared/interfaces/product/product.interface';
-import type { Nullable } from '@helix/shared/types';
-import { productActions } from '@helix/store/states/product/product.actions';
 import { createReducer, on } from '@ngrx/store';
+import type { Product } from '@app/interfaces/product/product.interface';
+import { productActions } from '@app/states/product/product.actions';
+import type { Nullable } from '@app/types/nullable.type';
 
 const initialState = {
   product: null as Nullable<Product>,

@@ -1,3 +1,5 @@
-export const environment = {
-  apiUrl: 'https://api-prod.resourcly.earth/api',
+import type { Environment } from '@app/interfaces/core/environment.interface';
+
+export const environment: Environment = {
+  apiUrl: 'https://angular-app-example.production',
 };

@@ -1,14 +1,14 @@
+import type { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { environment } from '@helix/environments/environment';
-import type { Product } from '@helix/shared/interfaces';
-import type { Observable } from 'rxjs';
+import type { Product } from '@app/interfaces/product/product.interface';
+import { EnvironmentService } from '@app/services/environment/environment.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductService {
-  readonly #apiUrl = environment.apiUrl;
+  readonly #apiUrl = inject(EnvironmentService).apiUrl;
   readonly #httpClient = inject(HttpClient);
 
   getProduct(productId: number): Observable<Product> {

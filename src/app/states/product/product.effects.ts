@@ -1,9 +1,9 @@
 import type { HttpErrorResponse } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { ProductService } from '@helix/services/product/product.service';
-import { productActions } from '@helix/store/states/product/product.actions';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, switchMap, throwError } from 'rxjs';
+import { ProductService } from '@app/services/product/product.service';
+import { productActions } from '@app/states/product/product.actions';
 
 const loadProduct = createEffect(
   (actions$ = inject(Actions), service = inject(ProductService)) => actions$.pipe(
@@ -18,6 +18,4 @@ const loadProduct = createEffect(
   { functional: true },
 );
 
-export const productEffects = {
-  loadProduct,
-};
+export const productEffects = { loadProduct };

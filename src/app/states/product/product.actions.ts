@@ -1,6 +1,6 @@
 import type { HttpErrorResponse } from '@angular/common/http';
-import type { Product } from '@helix/shared/interfaces';
 import { createActionGroup, props } from '@ngrx/store';
+import type { Product } from '@app/interfaces/product/product.interface';
 
 const productGroup = createActionGroup({
   source: 'Product',
@@ -11,6 +11,4 @@ const productGroup = createActionGroup({
   },
 });
 
-export const productActions = {
-  productGroup,
-};
+export const productActions = { productGroup };

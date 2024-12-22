@@ -11,7 +11,7 @@ module.exports = {
     'scope-enum': [
       RuleConfigSeverity.Error,
       'always',
-      ['update'],
+      ['update', 'structure'],
     ],
     'type-enum': [
       RuleConfigSeverity.Error,

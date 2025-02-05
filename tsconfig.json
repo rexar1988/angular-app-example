@@ -35,7 +35,10 @@
       "@app/services/*": ["src/app/services/*"],
       "@app/shared/*": ["src/app/shared/*"],
       "@app/states/*": ["src/app/states/*"],
-      "@app/views/*": ["src/app/views/*"]
+      "@app/views/*": ["src/app/views/*"],
+      "dist/test-lib/*": ["./dist/test-lib/*"],
+      "test-lib": ["./projects/test-lib"],
+      "test-lib/*": ["./projects/test-lib/*"]
     }
   },
   "angularCompilerOptions": {

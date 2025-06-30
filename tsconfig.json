@@ -1,7 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -9,42 +8,48 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
-    "esModuleInterop": true,
     "experimentalDecorators": true,
-    "moduleResolution": "bundler",
     "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
-    "useDefineForClassFields": false,
-    "lib": ["ESNext", "dom"],
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "baseUrl": "./",
-    "downlevelIteration": true,
-    "exactOptionalPropertyTypes": true,
+    "target": "ES2024",
+    "module": "preserve",
     "paths": {
+      "@app/animations/*": ["src/app/animations/*"],
       "@app/components/*": ["src/app/components/*"],
       "@app/directives/*": ["src/app/directives/*"],
-      "@app/enums/*": ["src/app/domain/enums/*"],
-      "@app/interfaces/*": ["src/app/domain/interfaces/*"],
-      "@app/models/*": ["src/app/domain/models/*"],
-      "@app/types/*": ["src/app/domain/types/*"],
+      "@app/environments/*": ["src/environments/*"],
       "@app/modules/*": ["src/app/modules/*"],
       "@app/pipes/*": ["src/app/pipes/*"],
       "@app/routing/*": ["src/app/routing/*"],
       "@app/services/*": ["src/app/services/*"],
       "@app/shared/*": ["src/app/shared/*"],
       "@app/states/*": ["src/app/states/*"],
+      "@app/validators/*": ["src/app/validators/*"],
       "@app/views/*": ["src/app/views/*"],
-      "dist/test-lib/*": ["./dist/test-lib/*"],
-      "test-lib": ["./projects/test-lib"],
-      "test-lib/*": ["./projects/test-lib/*"]
-    }
+      "test-ui": ["./projects/test-ui"],
+      "test-ui/*": ["./projects/test-ui/*"]
+    },
+    "baseUrl": "./",
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
+    "typeCheckHostBindings": true,
     "strictTemplates": true
-  }
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/test-ui/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/test-ui/tsconfig.spec.json"
+    },
+  ]
 }

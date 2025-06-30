@@ -3,12 +3,36 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-app-example": {
+    "angular-project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss",
-          "changeDetection": "OnPush"
+          "changeDetection": "OnPush",
+        },
+        "@schematics/angular:enum": {
+          "type": "enum"
+        },
+        "@schematics/angular:guard": {
+          "typeSeparator": "."
+        },
+        "@schematics/angular:interface": {
+          "type": "interface"
+        },
+        "@schematics/angular:interceptor": {
+          "typeSeparator": "."
+        },
+        "@schematics/angular:module": {
+          "typeSeparator": "."
+        },
+        "@schematics/angular:pipe": {
+          "typeSeparator": "."
+        },
+        "@schematics/angular:resolver": {
+          "typeSeparator": "."
+        },
+        "@schematics/angular:service": {
+          "type": "service"
         }
       },
       "root": "",
@@ -16,10 +40,8 @@
       "prefix": "showcase",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/angular-app-example",
-            "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -30,9 +52,8 @@
               }
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "src/styles.scss"
             ],
-            "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -102,28 +123,28 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-app-example:build:production"
+              "buildTarget": "angular-project:build:production"
             },
             "test": {
-              "buildTarget": "angular-app-example:build:test"
+              "buildTarget": "angular-project:build:test"
             },
             "dev": {
-              "buildTarget": "angular-app-example:build:dev"
+              "buildTarget": "angular-project:build:dev"
             },
             "local": {
-              "buildTarget": "angular-app-example:build:local"
+              "buildTarget": "angular-project:build:local"
             }
           },
           "defaultConfiguration": "local"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
+          "builder": "@angular/build:extract-i18n"
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular/build:karma",
           "options": {
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
@@ -134,9 +155,8 @@
               }
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "src/styles.scss"
             ],
-            "scripts": [],
             "karmaConfig": "karma.conf.js"
           }
         },
@@ -151,45 +171,38 @@
         }
       }
     },
-    "test-lib": {
+    "test-ui": {
       "projectType": "library",
-      "root": "projects/test-lib",
-      "sourceRoot": "projects/test-lib/src",
+      "root": "projects/test-ui",
+      "sourceRoot": "projects/test-ui/src",
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/test-lib/ng-package.json"
-          },
+          "builder": "@angular/build:ng-packagr",
           "configurations": {
             "production": {
-              "tsConfig": "projects/test-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/test-ui/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/test-lib/tsconfig.lib.json"
+              "tsConfig": "projects/test-ui/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular/build:karma",
           "options": {
-            "tsConfig": "projects/test-lib/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "tsConfig": "projects/test-ui/tsconfig.spec.json"
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/test-lib/**/*.ts",
-              "projects/test-lib/**/*.html"
+              "projects/test-ui/**/*.ts",
+              "projects/test-ui/**/*.html"
             ],
-            "eslintConfig": "projects/test-lib/eslint.config.js"
+            "eslintConfig": "projects/test-ui/eslint.config.js"
           }
         }
       }
@@ -197,7 +210,8 @@
   },
   "cli": {
     "schematicCollections": [
-      "angular-eslint"
+      "angular-eslint",
+      "@ngrx/schematics"
     ],
     "analytics": false
   }

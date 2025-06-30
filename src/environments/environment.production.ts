@@ -1,5 +1,5 @@
-import type { Environment } from '@app/interfaces/core/environment.interface';
+import type { Environment } from './interfaces/environment.interface';
 
 export const environment: Environment = {
-  apiUrl: 'https://angular-app-example.production',
+  apiUrl: 'https://jsonplaceholder.typicode.com',
 };

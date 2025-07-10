@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import type { Environment } from '@app/interfaces/core/environment.interface';
-import { environment } from '../../../environments/environment';
+import { environment } from '@app/environments/environment';
+import type { Environment } from '@app/shared/interfaces/core/environment.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -8,4 +8,5 @@ import { environment } from '../../../environments/environment';
 })
 export class EnvironmentService implements Environment {
   apiUrl = environment.apiUrl;
+
 }

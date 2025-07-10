@@ -23,8 +23,10 @@
     "downlevelIteration": true,
     "exactOptionalPropertyTypes": true,
     "paths": {
+      "@app/animations/*": ["src/app/animations/*"],
       "@app/components/*": ["src/app/components/*"],
       "@app/directives/*": ["src/app/directives/*"],
+      "@app/environments/*": ["src/environments/*"],
       "@app/enums/*": ["src/app/domain/enums/*"],
       "@app/interfaces/*": ["src/app/domain/interfaces/*"],
       "@app/models/*": ["src/app/domain/models/*"],

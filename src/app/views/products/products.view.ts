@@ -1,4 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { HeaderComponent } from '@app/components/header/header.component';
+
+const asdasd = HeaderComponent
 
 @Component({
   selector: 'showcase-products',

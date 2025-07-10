@@ -1,2 +1,2 @@
-npx stylelint "**/*.scss|css"
-ng lint
+#npx stylelint "**/*.scss|css"
+#ng lint

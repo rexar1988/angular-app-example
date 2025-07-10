@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { TranslatePipe } from 'test-lib/i18n';
 
+
 @Component({
   selector: 'lib-button',
   standalone: true,

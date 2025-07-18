@@ -1,0 +1,11 @@
+<section class="list">
+  <h1 class="">Posts</h1>
+  @for (post of posts(); track post.id) {
+    <div class="mb-5 p-4">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.body }}</p>
+    </div>
+  } @empty {
+    <p>There are no posts.</p>
+  }
+</section>

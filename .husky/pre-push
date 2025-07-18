@@ -1,1 +1,3 @@
-ng test --no-watch
+npx stylelint "**/*.scss|css"
+#ng lint
+#ng test --no-watch
